@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from app.routes.college_admin import router as college_admin_router
 
 from app.routes.colleges import router as colleges_router
 from app.routes.admin import router as admin_router
@@ -19,6 +20,7 @@ app.add_middleware(
 
 app.include_router(colleges_router)
 app.include_router(admin_router)
+app.include_router(college_admin_router)
 
 @app.get("/")
 async def root():
