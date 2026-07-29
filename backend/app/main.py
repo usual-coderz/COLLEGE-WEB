@@ -1,7 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.routes.admin import router as admin_router
+
 from app.routes.colleges import router as colleges_router
+from app.routes.admin import router as admin_router
 
 app = FastAPI(
     title="College Web API",
